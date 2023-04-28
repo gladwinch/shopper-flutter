@@ -1,4 +1,4 @@
-
+import 'package:flutter/material.dart';
 import '../forgot_password/forgot_password.dart';
 import '../login/login.dart';
 import '../main/main.dart';
@@ -6,7 +6,7 @@ import '../onboarding/onboarding.dart';
 import '../register/register.dart';
 import '../splash/splash.dart';
 import '../store_details/store_details.dart';
-import 'package:flutter/material.dart';
+import './strings_manager.dart';
 
 class Routes {
   static const String splashRoute = '/';
@@ -44,9 +44,9 @@ class RouteGenerator {
     return MaterialPageRoute(
     builder: (_) => Scaffold(
       appBar: AppBar(
-        title: const Text("No Route Found"),
+        title: const Text(AppStrings.noRouteFound),
       ),
-      body: const Center(child: Text("No Route Found")),
+      body: const Center(child: Text(AppStrings.noRouteFound)),
     ));
   }
 }
